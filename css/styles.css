@@ -1,0 +1,168 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url(reset.css);
+
+:root {
+  --primary-light-950: hsl(0, 0%, 95%);
+  --primary-light-900: hsl(0, 0%, 90%);
+  --primary-light-800: hsl(0, 0%, 80%);
+
+  --primary-dark-400: hsl(0, 0%, 40%);
+  --primary-dark-300: hsl(0, 0%, 30%);
+  --primary-dark-200: hsl(0, 0%, 20%);
+
+  --blue-400: hsl(217, 50%, 38%);
+
+  --white: hsl(0, 0%, 100%);
+  --black: hsl(0, 0%, 0%);
+}
+
+.light {
+  --body-bg: var(--white);
+  --border-color: var(--primary-light-800);
+  --bg-color: var(--primary-light-900);
+  --shadow-color: var(--primary-light-950);
+  --text-color: var(--black);
+
+  --link-text-color: var(--blue-400);
+  --link-bg-color: var(--blue-400);
+
+  --toogle-bg-color: var(--primary-dark-100);
+  --toogle-text-color: var(--white);
+}
+
+.dark {
+  --body-bg: var(--black);
+  --border-color: var(--primary-dark-200);
+  --bg-color: var(--primary-dark-300);
+  --shadow-color: var(--primary-dark-400);
+  --text-color: var(--white);
+
+  --link-text-color: var(--blue-400);
+  --link-bg-color: var(--blue-400);
+
+  --toogle-bg-color: var();
+  --toogle-text-color: var(--black);
+}
+
+body {
+  background-color: var(--body-bg);
+}
+
+#app {
+  color: var(--text-color);
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+#app header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  border: solid 1px var(--border-color);
+  height: 250px;
+  margin-top: 3rem;
+  background-color: var(--bg-color);
+  box-shadow: 4px 4px 7px 2px var(--shadow-color);
+}
+
+#app header h1 {
+  text-align: center;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  display: block;
+}
+
+#app header h1 button {
+  border-radius: 1rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  color: var(--toogle-text-color);
+  background-color: var(--toogle-bg-color);
+}
+
+#app header p {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+}
+
+#app article {
+  margin-top: 3rem;
+  padding: 0 3rem;
+}
+
+#pages-section {
+}
+
+#pages-section ul,
+ol {
+  list-style: none;
+  padding: 0;
+}
+
+#pages-section ul li.source {
+  padding-bottom: 1rem;
+}
+
+#pages-section ul li.source * {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+#pages-section li.page {
+  border: 1px solid var(--border-color);
+  border-radius: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+
+#pages-section li.page h5,
+a {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+#pages-section li.page h5 {
+  background-color: var(--bg-color);
+  padding-left: 1rem;
+  padding-right: auto;
+  flex-grow: 1;
+  border-radius: 0.5rem 0 0 0.5rem;
+}
+
+#pages-section li.page a,
+a:link,
+a:visited {
+  border-left: 1px solid var(--border-color);
+  padding-left: 1rem;
+  padding-right: 1rem;
+  text-decoration: none;
+  color: var(--link-text-color);
+}
+
+#pages-section li.page a:hover {
+  background-color: var(--link-bg-color);
+  color: var(--white);
+  border-radius: 0 0.5rem 0.5rem 0;
+}
+
+@media (max-width: 640px) {
+  #app {
+    width: 640px;
+  }
+}
+
+@media (min-width: 1024px) {
+  #app {
+    width: 1024px;
+    margin: 0 auto;
+  }
+
+  #app header {
+    border-radius: 1.5rem;
+  }
+}

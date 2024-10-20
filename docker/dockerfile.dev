@@ -1,0 +1,14 @@
+FROM nginx
+
+WORKDIR /app
+
+## ADD CONFIG FILE
+COPY configs/nginx.conf /etc/nginx/conf.d/apocmaster.conf
+
+## ADD APP FOLDERS AND FILES 
+COPY css .
+COPY scripts .
+COPY pages .
+COPY index.html .
+
+EXPOSE 8000
